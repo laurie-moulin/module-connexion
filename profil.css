@@ -1,0 +1,209 @@
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Play&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Piazzolla&display=swap');
+
+body{
+    background-color: rgb(212, 216, 214);
+    height: 100vh;
+    margin: 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* MAIN */
+
+main{
+    width: 90%;
+    height: 92%;
+    background-image: linear-gradient(to top, #b6aa9b, #aca092, #a39789, #998d80, #908477);
+    /* display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-between; */
+    align-items: stretch;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0px 0px 21px 1px rgba(0,0,0,0.75);
+}
+
+/* PICTURE */
+
+.container_img img{
+    width: 100%;
+    height: 100%;
+}
+
+.container_img{
+    width: 100%;
+    height: 50%;
+    background-color: rgb(0, 0, 0);
+}
+
+/* LOGO */
+
+.logo{
+    width: 30%;
+    /* display: block;
+    margin-left: auto;
+    margin-right: auto; */
+    opacity: 0.6;
+}
+
+.container_title {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    width: 25%;
+    height: 100%;
+    background-image: url(ressource/modern-house-skylights-hallway-271219-113-04.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+h1{
+    color:rgba(78, 57, 35, 0.904);
+    margin-left: 7%;
+    font-family: 'Piazzolla', serif;
+    font-size: 40px;
+    writing-mode: vertical-lr;
+    text-orientation: upright;
+    
+
+}
+
+/* FORMULAIRE */
+
+
+
+.container_form{
+width: 100%;
+height: 100%;
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+align-items: center;
+
+}
+
+.container_form legend{
+    font-size: 1.5em;
+    color: white;
+    margin-bottom: 5%;
+}
+
+.container_formulaire{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
+    height: 100%;
+}
+
+.container_formulaire h2{
+    text-align: center;
+    font-family: 'Titillium Web', sans-serif;
+    color: white;
+}
+
+.container_formulaire p{
+    text-align: center;
+    font-family: 'Titillium Web', sans-serif;
+    color: white;
+    border-bottom: 1px solid white;
+    margin-bottom: 5%;
+}
+
+.form_inscription{
+    font-family: 'Titillium Web', sans-serif;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    width: 100%;
+    
+}
+
+.display_form{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-end;
+
+}
+
+.form_inscription label{
+    color : rgba(194, 194, 194, 0.904);
+    width: 110%;
+}
+
+
+.form_inscription input{
+    background-color:rgba(197, 197, 197, 0.904);
+    border: none;
+    border-bottom: 1px solid rgb(0, 0, 0);
+    margin-top: 5%;
+    height: 30px;
+    width: 120%;
+}
+
+.form_inscription input:focus{
+    background-color: rgba(216, 214, 214, 0.904);
+    outline: none;
+    box-shadow: 0px 0px 21px 1px rgba(0,0,0,0.75);
+    transition: 0.5s;
+}
+
+.button {
+    background-color:  rgba(99, 98, 98, 0.904);
+    border: 1px solid rgba(99, 98, 98, 0.904);
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 17px;
+    width: 100%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.input button{
+    width: 100%;
+}
+
+.button:hover{
+    background-color: rgba(121, 160, 192, 0.726);
+    cursor: pointer;
+    transform: scale(1.2);
+    transition: 0.6s;
+    border: 1px solid  rgba(61, 126, 180, 0.726);
+}
+
+
+/* LIEN */
+
+
+.lien{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 7%;
+    font-family: 'Titillium Web', sans-serif; 
+}
+
+
+
+a{
+    color:black;
+    font-size: 15px;
+    text-decoration: none;
+}
+
+a:hover{
+    color: #ffffff;
+}
+
+
+
+
+

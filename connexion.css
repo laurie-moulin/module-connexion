@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Play&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Piazzolla&display=swap');
+
+body{
+    background-color: rgb(216, 212, 212);
+    height: 100vh;
+    margin: 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* MAIN */
+
+main{
+    width: 90%;
+    height: 92%;
+    background-color: rgba(114, 38, 38, 0.904);
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: stretch;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0px 0px 21px 1px rgba(0,0,0,0.75);
+}
+
+/* PICTURE */
+
+.container_img img{
+    width: 100%;
+    height: 100%;
+}
+
+.container_img{
+    width: 43%;
+    height: 100%;
+    background-color: rgb(0, 0, 0);
+}
+
+/* LOGO */
+
+.logo{
+    width: 14%;
+    /* display: block;
+    margin-left: auto;
+    margin-right: auto; */
+    opacity: 0.6;
+}
+
+.container_title {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid black;
+}
+
+h1{
+    margin-top: ;
+    margin-left: 7%;
+    font-family: 'Piazzolla', serif;
+    font-weight: lighter;
+    font-size: 45px;
+}
+
+/* FORMULAIRE */
+
+.container_form{
+    width: 45%;
+    align-items: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.form_connexion{
+    text-align: center;
+    font-family: 'Titillium Web', sans-serif;
+    margin-top: 5%;
+}
+
+
+.form_connexion input{
+    background-color: rgba(161, 53, 53, 0.411);
+    border: none;
+    border-bottom: 1px solid rgb(0, 0, 0);
+    height: 25px;
+    width: 40%;
+    margin-top: 3%;
+}
+
+.form_connexion input:focus{
+    background-color: rgba(172, 80, 80, 0.801);
+    outline: none;
+    box-shadow: 0px 0px 21px 1px rgba(0,0,0,0.75);
+    transition: 0.5s;
+}
+
+.button{
+    background-color:  rgba(161, 53, 53, 0.411);
+    border: 1px solid rgba(161, 53, 53, 0.411);
+    font-family: 'Titillium Web', sans-serif;
+    padding: 1%;
+    font-size: 16px;
+    width: 30%;
+    margin-top: 2%;
+}
+
+.button:hover{
+    background-color: rgba(172, 80, 80, 0.801);
+    cursor: pointer;
+    transform: scale(1.2);
+    transition: 0.6s;
+    border: 1px solid  rgba(172, 80, 80, 0.801);
+}
+
+
+/* LIEN */
+
+
+.lien{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 7%;
+    font-family: 'Titillium Web', sans-serif; 
+}
+
+
+
+a{
+    color:black;
+    font-size: 15px;
+    text-decoration: none;
+}
+
+a:hover{
+    color: #ffffff;
+}
+
+
+
+
+
