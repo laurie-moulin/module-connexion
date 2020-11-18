@@ -103,7 +103,7 @@ if(isset($_POST['forminscription'])) {
                         <input type="password" name="password2" placeholder= "Confirmation mot de passe" /><br>
                         <br>
 
-                        <button type="submit" name="forminscription" class="button">Connexion</button>
+                        <button type="submit" name="forminscription" class="button">S'inscrire</button>
 
                 </form>
             </article>

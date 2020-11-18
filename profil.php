@@ -46,10 +46,10 @@ if(isset($_SESSION['id'])) {
          } 
          else {
             $msg = "Vos deux mdp ne correspondent pas !";
-         }    
-         }  if ($msg == ""){
+         }    if ($msg == ""){
             $msg = "Votre profil a bien été modifié !";
-      }      
+         }  
+      }    
    } 
       
 } 
