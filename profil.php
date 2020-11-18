@@ -3,6 +3,8 @@ session_start();
  
 $bdd = new PDO('mysql:host=localhost;dbname=moduleconnexion', 'root', 'root');
 
+$msg = "";
+
 if(isset($_SESSION['id'])) {   
    $requser = $bdd->prepare("SELECT * FROM utilisateurs WHERE id = ?");
    $requser->execute(array($_SESSION['id']));
@@ -11,9 +13,19 @@ if(isset($_SESSION['id'])) {
    if(isset($_POST['formprofil'])){
 
       if(isset($_POST['newlogin']) AND !empty($_POST['newlogin']) AND $_POST['newlogin'] != $user['login']) {
-         $newlogin = htmlspecialchars($_POST['newlogin']);
-         $insertlogin = $bdd->prepare("UPDATE utilisateurs SET login = ? WHERE id = ?");
-         $insertlogin->execute(array($newlogin, $_SESSION['id']));
+            $login = htmlspecialchars($_POST['newlogin']);
+            $reqlogin = $bdd->prepare("SELECT * FROM utilisateurs WHERE login = ?");
+            $reqlogin->execute(array($login));
+            $loginexist = $reqlogin->rowCount();
+
+            if($loginexist == 0) {
+            $newlogin = htmlspecialchars($_POST['newlogin']);
+            $insertlogin = $bdd->prepare("UPDATE utilisateurs SET login = ? WHERE id = ?");
+            $insertlogin->execute(array($newlogin, $_SESSION['id']));
+            }
+            else{
+            $msg = "Login déjà utilisé";
+         }
       }
       if(isset($_POST['newprenom']) AND !empty($_POST['newprenom']) AND $_POST['newprenom'] != $user['prenom']) {
          $newprenom = htmlspecialchars($_POST['newprenom']);
@@ -26,19 +38,21 @@ if(isset($_SESSION['id'])) {
          $insertnom->execute(array($newnom, $_SESSION['id']));
       }
       if(isset($_POST['newmdp1']) AND !empty($_POST['newmdp1']) AND isset($_POST['newmdp2']) AND !empty($_POST['newmdp2'])) {
-         $mdp1 = sha1($_POST['newmdp1']);
-         $mdp2 = sha1($_POST['newmdp2']);
+         $mdp1 = ($_POST['newmdp1']);
+         $mdp2 = ($_POST['newmdp2']);
          if($mdp1 == $mdp2) {
             $insertmdp = $bdd->prepare("UPDATE utilisateurs SET motdepasse = ? WHERE id = ?");
-            $insertmdp->execute(array($mdp1, $_SESSION['id']));
-            $msg = "Votre profil a bien été modifié !";
-         } else {
+            $insertmdp->execute(array($mdp1, $_SESSION['id'])); 
+         } 
+         else {
             $msg = "Vos deux mdp ne correspondent pas !";
-         }        
-      } 
-   }  
-
-}
+         }    
+         }  if ($msg == ""){
+            $msg = "Votre profil a bien été modifié !";
+      }      
+   } 
+      
+} 
 
 
  

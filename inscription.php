@@ -6,8 +6,8 @@ if(isset($_POST['forminscription'])) {
     $login = htmlspecialchars($_POST['login']);
     $prenom = htmlspecialchars($_POST['prenom']);
     $nom = htmlspecialchars($_POST['nom']);
-    $password = sha1($_POST['password']);
-    $password2= sha1($_POST['password2']);
+    $password = $_POST['password'];
+    $password2= $_POST['password2'];
 
     if(!empty($_POST['login']) AND !empty($_POST['prenom']) AND !empty($_POST['nom']) AND !empty($_POST['password'] AND !empty($_POST['password2']))){
         $loginlength = strlen($login);

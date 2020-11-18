@@ -5,26 +5,35 @@ $bdd = new PDO('mysql:host=localhost;dbname=moduleconnexion', 'root', 'root');
  
 if(isset($_POST['formconnection'])) {
    $loginconnect = htmlspecialchars($_POST['login']);
-   $passwordconnect = sha1($_POST['password']);
+   $passwordconnect = $_POST['password'];
 
    if(!empty($loginconnect) AND !empty($passwordconnect)) {
     $requser = $bdd->prepare("SELECT * FROM utilisateurs WHERE login = ? AND password = ?");
     $requser->execute(array($loginconnect, $passwordconnect));
     $userexist = $requser->rowCount();
 
+
     if($userexist == 1) {
        $userinfo = $requser->fetch();
        $_SESSION['id'] = $userinfo['id'];
        $_SESSION['login'] = $userinfo['login'];
        $_SESSION['password'] = $userinfo['password'];
-       header("Location: profil.php?id=".$_SESSION['id']);
-    } else {
+
+       if ($userinfo['login'] == 'admin' AND $userinfo['password'] == 'admin'){
+           header("Location: admin.php?id=".$_SESSION['id']);
+       }
+       else{
+            header("Location: profil.php?id=".$_SESSION['id']);
+       }     
+    }    
+    else {
         $erreur = "Mauvais mail ou mot de passe !";
      }
   } else {
      $erreur = "Tous les champs doivent être complétés !";
   }
 }
+
 
 ?>
 

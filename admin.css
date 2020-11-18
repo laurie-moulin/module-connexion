@@ -1,0 +1,83 @@
+  @import url('https://fonts.googleapis.com/css2?family=Titillium+Web&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Play&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Piazzolla&display=swap');
+
+body{
+    background-color: rgb(212, 216, 214);
+    height: 100vh;
+    margin: 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+table{
+    width: 100%;
+    border-collapse: collapse;
+
+
+
+}
+
+table th, table td {
+    border: solid 1px;
+    height: 20px;
+  }
+
+  .table{
+    height: 80vh;
+    overflow-y:scroll;
+
+  }
+
+  ::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    background: rgba(8, 8, 8, 0.993); 
+    -webkit-box-shadow: inset 0 0 2px rgba(0,0,0,0.5); 
+}
+
+
+
+/* MAIN */
+
+main{
+    width: 90%;
+    height: 92%;
+    background-image: linear-gradient(to top, #bfe0d3, #b0d4c6, #a1c9b9, #92bdad, #83b2a0);
+    align-items: stretch;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0px 0px 21px 1px rgba(0,0,0,0.75);
+}
+
+
+
+
+
+h1{
+    color:rgba(0, 0, 0, 0.904);
+    text-align: center;
+    font-family: 'Piazzolla', serif;
+    font-size: 20px;
+
+    
+
+}
+
+
+
+
+
+
+
