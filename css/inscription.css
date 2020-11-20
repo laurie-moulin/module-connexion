@@ -16,9 +16,9 @@ body{
 main{
     width: 90%;
     height: 92%;
-    background-color: rgba(114, 38, 38, 0.904);
+    background-color: rgba(29, 56, 78, 0.904);
     display: flex;
-    flex-direction: row-reverse;
+    flex-direction: row;
     justify-content: space-between;
     align-items: stretch;
     margin-left: auto;
@@ -42,7 +42,7 @@ main{
 /* LOGO */
 
 .logo{
-    width: 14%;
+    width: 8%;
     /* display: block;
     margin-left: auto;
     margin-right: auto; */
@@ -54,110 +54,19 @@ main{
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    border-bottom: 1px solid black;
 }
 
 h1{
-    margin-top: ;
+    color:rgba(92, 179, 250, 0.904);
     margin-left: 7%;
     font-family: 'Piazzolla', serif;
     font-weight: lighter;
-    font-size: 45px;
+    font-size: 20px;
 }
-
-/* NAV */
-
-
-#menu {
-    position: absolute;
-    background: transparent;
-    left: 5%;
-    top: 5%;
-	height: 33px;
-	padding-left: 18px;
-    border-radius: 10px;
-    z-index: 1;
-    font-family: 'Piazzolla', serif;
-}
-#menu ul, #menu li {
-	margin: 0 auto;
-	padding: 0;
-	list-style: none
-}
-#menu ul {
-	width: 100%;
-}
-#menu li {
-	float: left;
-	display: inline;
-    position: relative;
-}
-#menu a {
-	display: block;
-	line-height: 33px;
-	padding: 0 14px;
-	text-decoration: none;
-    font-size: 16px;
-    color: white;
-}
-#menu a.dropdown-arrow:after {
-	content: "\25BE";
-    margin-left: 5px;
-    color: white;
-}
-#menu li a:hover {
-	color: black;
-	background: white;
-}
-#menu input {
-	display: none;
-	margin: 0;
-	padding: 0;
-	height: 33px;
-	width: 100%;
-	opacity: 0;
-	cursor: pointer
-}
-#menu label {
-	display: none;
-	line-height: 33px;
-	text-align: center;
-	position: absolute;
-	left: 35px
-}
-#menu label:before {
-	font-size: 1.6em;
-	content: "\2261"; 
-	margin-left: 20px;
-}
-#menu ul.sub-menus{
-	height: auto;
-	overflow: hidden;
-	width: 170px;
-	background: #444444;
-	position: absolute;
-	z-index: 99;
-	display: none;
-}
-#menu ul.sub-menus li {
-	display: block;
-	width: 100%;
-}
-#menu ul.sub-menus a {
-	color: #FFFFFF;
-	font-size: 16px;
-}
-#menu li:hover ul.sub-menus {
-	display: block
-}
-#menu ul.sub-menus a:hover{
-	background: #F2F2F2;
-	color: #444444;
-}
-
-
 
 /* FORMULAIRE */
+
+
 
 .container_form{
     width: 45%;
@@ -166,33 +75,40 @@ h1{
     margin-left: auto;
     margin-right: auto;
 }
-
-.form_connexion{
+.container_form legend{
+    font-size: 1.5em;
+    color: white;
+    margin-bottom: 5%;
+}
+.form_inscription{
     text-align: center;
     font-family: 'Titillium Web', sans-serif;
-    margin-top: 5%;
+    border-top: 1px solid white;
+}
+
+.form_inscription label{
+    color : rgba(92, 179, 250, 0.726);
 }
 
 
-.form_connexion input{
-    background-color: rgba(161, 53, 53, 0.411);
+.form_inscription input{
+    background-color: rgba(40, 85, 122, 0.726);
     border: none;
     border-bottom: 1px solid rgb(0, 0, 0);
     height: 25px;
     width: 40%;
-    margin-top: 3%;
 }
 
-.form_connexion input:focus{
-    background-color: rgba(172, 80, 80, 0.801);
+.form_inscription input:focus{
+    background-color: rgba(61, 126, 180, 0.726);
     outline: none;
     box-shadow: 0px 0px 21px 1px rgba(0,0,0,0.75);
     transition: 0.5s;
 }
 
 .button{
-    background-color:  rgba(161, 53, 53, 0.411);
-    border: 1px solid rgba(161, 53, 53, 0.411);
+    background-color:  rgba(40, 85, 122, 0.726);
+    border: 1px solid rgba(40, 85, 122, 0.726);
     font-family: 'Titillium Web', sans-serif;
     padding: 1%;
     font-size: 16px;
@@ -201,11 +117,11 @@ h1{
 }
 
 .button:hover{
-    background-color: rgba(172, 80, 80, 0.801);
+    background-color: rgba(61, 126, 180, 0.726);
     cursor: pointer;
     transform: scale(1.2);
     transition: 0.6s;
-    border: 1px solid  rgba(172, 80, 80, 0.801);
+    border: 1px solid  rgba(61, 126, 180, 0.726);
 }
 
 

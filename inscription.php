@@ -66,6 +66,29 @@ if(isset($_POST['forminscription'])) {
 
     <header>
 
+    <nav id='menu'>
+  <ul>
+    <li><a class='dropdown-arrow' href='http://'>Menu</a>
+      <ul class='sub-menus'>
+      <li><a href='index.php'>Accueil</a></li>
+  <li><a href='#'>Projets</a></li>
+  <?php if (isset($_SESSION['id'] )) {?> 
+          <li class="active"><a href="profil.php?id=" <?php $_SESSION['id'] ?> >Profil</a></li>
+          <?php }  else { ?>
+         <li class="active"><li><a href='inscription.php'>Inscription</a></li>
+          <?php } ?>
+        <?php if (isset($_SESSION['id'] )) {?> 
+          <li class="active"><a href="deconnexion.php">Deconnexion</a></li>
+          <?php }  else { ?>
+         <li class="active"><a href="connexion.php">Connexion</a></li>
+          <?php } ?> 
+
+        <li><a href='#'>Contact</a></li>
+      </ul>
+    </li>
+</nav>
+
+
     </header>
 
     <main>
@@ -131,3 +154,5 @@ if(isset($_POST['forminscription'])) {
 </body>
 
 </html>
+
+<?php $bdd = null ?>

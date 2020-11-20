@@ -52,3 +52,5 @@ echo "</div></table>";
 
 
 </html>
+
+<?php $bdd = null ?>
