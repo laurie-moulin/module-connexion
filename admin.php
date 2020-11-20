@@ -17,7 +17,7 @@
 
 <?php
 
-$bdd = new PDO('mysql:host=localhost;dbname=moduleconnexion', 'root', 'root');
+$bdd = new PDO('mysql:host=localhost;dbname=moduleconnexion', 'root', '');
 
 
 $data = $bdd->prepare('SELECT * FROM utilisateurs');
